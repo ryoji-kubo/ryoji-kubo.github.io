@@ -1,0 +1,362 @@
+/* Keep visual decisions here. The page uses local system fonts only. */
+:root {
+  color-scheme: light;
+  --paper: #fdfcf9;
+  --ink: #292b2c;
+  --muted: #676762;
+  --accent: #854735;
+  --rule: #ddddd5;
+  --body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --heading-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body-font);
+  font-size: 100%;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+::selection {
+  background: #ede0d7;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+  border-radius: 1px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--paper);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.page {
+  width: min(100% - 3rem, 48rem);
+  margin: 0 auto;
+  padding: 6.5rem 0 2rem;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 7.5rem;
+  column-gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.name-block {
+  grid-column: 1;
+}
+
+.portrait {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  align-self: center;
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.name-block::before {
+  content: "";
+  display: block;
+  width: 1.75rem;
+  height: 2px;
+  margin-bottom: 1.25rem;
+  background: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: clamp(2.5rem, 5vw, 3.125rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.role {
+  grid-column: 1;
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+nav {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.15rem;
+  margin-top: 1.25rem;
+  font-size: 0.8125rem;
+}
+
+nav a {
+  padding: 0.2rem 0;
+  color: var(--muted);
+}
+
+nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.intro.intro--text {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: 1.5rem;
+  border-top: 1px solid var(--rule);
+  padding: 1.75rem 0 2rem;
+  scroll-margin-top: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.95;
+}
+
+.section-body {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.section-body p {
+  margin: 0 0 1rem;
+}
+
+.section-body > :last-child {
+  margin-bottom: 0;
+}
+
+.news-list,
+.record-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9375rem;
+}
+
+.news-list {
+  gap: 0.9rem;
+}
+
+.news-list li {
+  display: grid;
+  grid-template-columns: 4.75rem minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.news-list time {
+  padding-top: 0.1rem;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.news-list p,
+.record-list p {
+  margin: 0;
+}
+
+.record-list {
+  gap: 1.5rem;
+}
+
+.record-list h3 {
+  margin: 0 0 0.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.record-list .record-meta {
+  margin-bottom: 0.25rem;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.course-code {
+  color: var(--muted);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.publications {
+  display: grid;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.publications h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.section-body .publication-authors,
+.section-body .publication-venue {
+  margin-bottom: 0.35rem;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  line-height: 1.65;
+}
+
+.author-self {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.section-body .publication-summary {
+  margin: 0.75rem 0 0;
+  font-size: 0.9375rem;
+}
+
+.profile-links {
+  grid-column: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  margin: 0.75rem 0 0 -0.625rem;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--muted);
+}
+
+.profile-links a:hover,
+.profile-links a:focus-visible {
+  color: var(--accent);
+}
+
+.profile-links svg {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  border-top: 1px solid var(--rule);
+  padding-top: 1.25rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+footer a {
+  color: inherit;
+}
+
+@media (max-width: 40rem) {
+  .page {
+    padding-top: 3rem;
+  }
+
+  .intro {
+    grid-template-columns: minmax(0, 1fr) 4.5rem;
+    column-gap: 1rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .portrait {
+    grid-row: 1;
+    align-self: end;
+  }
+
+  .role,
+  .profile-links,
+  nav {
+    grid-column: 1 / -1;
+  }
+
+  .section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 1.5rem 0 1.75rem;
+  }
+
+  .news-list li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.15rem;
+  }
+}
+
+@media print {
+  html {
+    background: white;
+    color: black;
+    font-size: 11pt;
+  }
+
+  .page {
+    width: 100%;
+    padding: 0;
+  }
+
+  nav,
+  .skip-link,
+  footer {
+    display: none;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .publications article,
+  .news-list li,
+  .record-list li {
+    break-inside: avoid;
+  }
+}
