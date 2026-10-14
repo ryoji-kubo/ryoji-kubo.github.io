@@ -12,6 +12,7 @@
 !/scripts/
 /scripts/*
 !/scripts/check_site.py
+!/scripts/build_map.py
 
 .DS_Store
 __pycache__/

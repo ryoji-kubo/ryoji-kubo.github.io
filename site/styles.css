@@ -6,6 +6,7 @@
   --muted: #676762;
   --accent: #854735;
   --rule: #ddddd5;
+  --map-land: #e5e3dc;
   --body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --heading-font: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
 }
@@ -283,6 +284,107 @@ h2 {
   fill: currentColor;
 }
 
+.places-figure {
+  grid-column: 1 / -1;
+  min-width: 0;
+  margin: 0;
+}
+
+.places-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1.5rem;
+  overflow: visible;
+}
+
+.map-land {
+  fill: var(--map-land);
+}
+
+.map-place {
+  color: var(--muted);
+}
+
+.map-leader {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0.8;
+  vector-effect: non-scaling-stroke;
+}
+
+.map-dot {
+  fill: currentColor;
+}
+
+.map-label {
+  fill: var(--ink);
+  stroke: var(--paper);
+  stroke-width: 5;
+  paint-order: stroke;
+  font-family: var(--body-font);
+  font-size: 18px;
+  font-weight: 500;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.map-place--current {
+  color: var(--accent);
+}
+
+.map-place--current .map-label {
+  fill: currentColor;
+}
+
+.map-current-ring {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.places-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9375rem;
+}
+
+.places-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.place-number {
+  flex: 0 0 1.25rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.place-region {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+
+.place-current .place-number {
+  outline: 1px solid var(--accent);
+  border-radius: 50%;
+}
+
+.place-current,
+.place-current .place-number,
+.place-current .place-region {
+  color: var(--accent);
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -330,6 +432,24 @@ footer a {
     grid-template-columns: minmax(0, 1fr);
     gap: 0.15rem;
   }
+
+  .map-label {
+    font-size: 36px;
+    stroke-width: 8;
+  }
+
+  .map-dot {
+    r: 4px;
+  }
+
+  .places-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0.75rem;
+  }
+
+  .places-list li {
+    gap: 0.4rem;
+  }
 }
 
 @media print {
@@ -357,6 +477,10 @@ footer a {
   .publications article,
   .news-list li,
   .record-list li {
+    break-inside: avoid;
+  }
+
+  .places-figure {
     break-inside: avoid;
   }
 }
