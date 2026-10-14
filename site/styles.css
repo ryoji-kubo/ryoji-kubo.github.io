@@ -88,15 +88,6 @@ a:focus-visible {
   border-radius: 2px;
 }
 
-.name-block::before {
-  content: "";
-  display: block;
-  width: 1.75rem;
-  height: 2px;
-  margin-bottom: 1.25rem;
-  background: var(--accent);
-}
-
 h1 {
   margin: 0;
   font-family: var(--heading-font);
@@ -317,11 +308,15 @@ h2 {
   fill: currentColor;
 }
 
+.map-label-circle {
+  fill: var(--paper);
+  stroke: currentColor;
+  stroke-width: 1.2;
+  vector-effect: non-scaling-stroke;
+}
+
 .map-label {
-  fill: var(--ink);
-  stroke: var(--paper);
-  stroke-width: 5;
-  paint-order: stroke;
+  fill: currentColor;
   font-family: var(--body-font);
   font-size: 18px;
   font-weight: 500;
@@ -333,12 +328,16 @@ h2 {
   color: var(--accent);
 }
 
-.map-place--current .map-label {
+.map-place--current .map-label-circle {
   fill: currentColor;
 }
 
+.map-place--current .map-label {
+  fill: var(--paper);
+}
+
 .map-current-ring {
-  fill: none;
+  fill: var(--paper);
   stroke: currentColor;
   stroke-width: 1.5;
   vector-effect: non-scaling-stroke;
@@ -435,7 +434,10 @@ footer a {
 
   .map-label {
     font-size: 36px;
-    stroke-width: 8;
+  }
+
+  .map-label-circle {
+    r: 26px;
   }
 
   .map-dot {

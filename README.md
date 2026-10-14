@@ -100,6 +100,8 @@ needed when replacing the outline; normal editing and publishing need no build.
 For a new city, use `project(longitude, latitude)` from `scripts/build_map.py` to
 calculate its position in the map’s `1000 × 500` viewBox. Add a `.map-place` group
 and a matching `.places-list` item. Keep dots at their projected positions and
-offset only the leader lines and number labels. Check nearby markers at mobile
-widths. To change the current home, move `.map-place--current`, the ring, and
+offset only the leader lines and number labels. End each line at the center of
+its number circle and draw the opaque circle over it, keeping the connection
+intact as the circle grows on mobile. Check nearby markers at mobile widths.
+To change the current home, move `.map-place--current`, the ring, and
 `.place-current` to the new city and update the surrounding text.

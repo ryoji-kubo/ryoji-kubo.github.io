@@ -50,62 +50,71 @@
           <figure class="places-figure">
             <svg class="places-map" viewBox="0 0 1000 500" role="img" aria-labelledby="map-title map-description">
               <title id="map-title">Places I’ve lived around the world</title>
-              <desc id="map-description">Nine numbered locations, listed below the map. Singapore, number 9, has a rust-colored ring to mark my current home.</desc>
+              <desc id="map-description">Nine locations connected to circled numbers, listed below the map. Singapore, number 9, has a rust-colored ring and a filled rust number circle to mark my current home.</desc>
               <use class="map-land" href="assets/world-land.svg#land"></use>
-              <!-- Dots use the Equal Earth projection in scripts/build_map.py; labels are offset for legibility. -->
+              <!-- Lines end at label centers, behind opaque circles, to stay connected at every size. -->
               <g class="map-place">
                 <title>1. Warsaw, Poland</title>
-                <path class="map-leader" d="M544.8 79.2L554 54"/>
+                <path class="map-leader" d="M544.8 79.2L559 40"/>
                 <circle class="map-dot" cx="544.8" cy="79.2" r="3"/>
+                <circle class="map-label-circle" cx="559" cy="40" r="13"/>
                 <text class="map-label" x="559" y="40">1</text>
               </g>
               <g class="map-place">
                 <title>2. London, United Kingdom</title>
-                <path class="map-leader" d="M499.7 81.1L481 65"/>
+                <path class="map-leader" d="M499.7 81.1L472 53"/>
                 <circle class="map-dot" cx="499.7" cy="81.1" r="3"/>
+                <circle class="map-label-circle" cx="472" cy="53" r="13"/>
                 <text class="map-label" x="472" y="53">2</text>
               </g>
               <g class="map-place">
                 <title>3. Omihachiman, Japan</title>
-                <path class="map-leader" d="M826.6 129.7L807 151"/>
+                <path class="map-leader" d="M826.6 129.7L796 166"/>
                 <circle class="map-dot" cx="826.6" cy="129.7" r="3"/>
+                <circle class="map-label-circle" cx="796" cy="166" r="13"/>
                 <text class="map-label" x="796" y="166">3</text>
               </g>
               <g class="map-place">
                 <title>4. Tsukuba, Japan</title>
-                <path class="map-leader" d="M834.3 126.6L865 117"/>
+                <path class="map-leader" d="M834.3 126.6L883 113"/>
                 <circle class="map-dot" cx="834.3" cy="126.6" r="3"/>
+                <circle class="map-label-circle" cx="883" cy="113" r="13"/>
                 <text class="map-label" x="883" y="113">4</text>
               </g>
               <g class="map-place">
                 <title>5. Jeddah, Saudi Arabia</title>
-                <path class="map-leader" d="M599.7 174.8L582 182"/>
+                <path class="map-leader" d="M599.7 174.8L566 189"/>
                 <circle class="map-dot" cx="599.7" cy="174.8" r="3"/>
+                <circle class="map-label-circle" cx="566" cy="189" r="13"/>
                 <text class="map-label" x="566" y="189">5</text>
               </g>
               <g class="map-place">
                 <title>6. Pune, India</title>
-                <path class="map-leader" d="M689.5 184.9L703 207"/>
+                <path class="map-leader" d="M689.5 184.9L713 224"/>
                 <circle class="map-dot" cx="689.5" cy="184.9" r="3"/>
+                <circle class="map-label-circle" cx="713" cy="224" r="13"/>
                 <text class="map-label" x="713" y="224">6</text>
               </g>
               <g class="map-place">
                 <title>7. Abu Dhabi, United Arab Emirates</title>
-                <path class="map-leader" d="M636.9 164.7L647 143"/>
+                <path class="map-leader" d="M636.9 164.7L653 127"/>
                 <circle class="map-dot" cx="636.9" cy="164.7" r="3"/>
+                <circle class="map-label-circle" cx="653" cy="127" r="13"/>
                 <text class="map-label" x="653" y="127">7</text>
               </g>
               <g class="map-place">
                 <title>8. New York City, United States</title>
-                <path class="map-leader" d="M328.2 112.3L305 118"/>
+                <path class="map-leader" d="M328.2 112.3L288 123"/>
                 <circle class="map-dot" cx="328.2" cy="112.3" r="3"/>
+                <circle class="map-label-circle" cx="288" cy="123" r="13"/>
                 <text class="map-label" x="288" y="123">8</text>
               </g>
               <g class="map-place map-place--current">
                 <title>9. Singapore — current home</title>
-                <path class="map-leader" d="M773.2 245.2L793 268"/>
+                <path class="map-leader" d="M773.2 245.2L805 283"/>
                 <circle class="map-current-ring" cx="773.2" cy="245.2" r="9"/>
                 <circle class="map-dot" cx="773.2" cy="245.2" r="4"/>
+                <circle class="map-label-circle" cx="805" cy="283" r="13"/>
                 <text class="map-label" x="805" y="283">9</text>
               </g>
             </svg>
