@@ -12,13 +12,16 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="page">
+    <div class="page" id="top" tabindex="-1">
       <header class="intro">
         <div class="name-block">
           <h1>Ryoji Kubo</h1>
         </div>
         <img class="portrait" src="assets/ryoji-head.jpg" alt="Portrait of Ryoji Kubo" width="2686" height="2476" decoding="async">
-        <p class="role">Computer science · National University of Singapore</p>
+        <p class="role">
+          Computer Science · National University of Singapore
+          <span class="contact">Contact: ryoji[last_name][at]u.nus.edu</span>
+        </p>
         <ul class="profile-links" aria-label="Profiles">
           <li>
             <a href="https://scholar.google.com/citations?user=Fsk1zIEAAAAJ&amp;hl=en" aria-label="Google Scholar" title="Google Scholar">
@@ -78,7 +81,9 @@
           <div class="section-body">
             <p>
               My research interests are AI for science, graph machine learning,
-              and deep learning.
+              and deep learning. I’m especially interested in applying machine learning
+              to materials science. Can we build models that respect physical constraints
+              and generate materials that can be synthesized?
             </p>
           </div>
         </section>
@@ -262,7 +267,7 @@
 
       <footer>
         <span>Ryoji Kubo</span>
-        <a href="https://github.com/ryoji-kubo/ryoji-kubo.github.io">Website source</a>
+        <a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
       </footer>
     </div>
   </body>
